@@ -7,9 +7,20 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+On normal swift arrays, subscript them with the word "safe:", if bounds checking fails, then it will return nil.
 
-## Requirements
+### Example
+
+```Swift
+let testArray = [1,2,3]
+
+// Will return nil
+testArray[safe: 4]
+
+// Will crash the app with an "array out of bounds exception".
+testArray[4]
+
+```
 
 ## Installation
 
